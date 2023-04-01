@@ -102,42 +102,60 @@ let cards =
     }                                                                                       
 ];
 
-cards.forEach((element,index) => {
-    let html =  ` <option value=${index}>${element.cardName}</option>`
-    select.insertAdjacentHTML("beforeend", html);
 
-    html = ` <div class="d-flex justify-content-between align-items-center border rounded-pill card-rate px-4 py-3">
-                <div class="d-flex flex-md-fill flex-column flex-md-row ">
-                    <p class="mb-1 mb-md-0">${element.cardName}</p>
-                    <p class="mb-0 flex-fill text-center fw-bold">${element.cardAlias}</p>
-                </div>
-                <p class="mb-0 fw-bolder">₦${element.rate}</p>
-            </div>`
-    giftCardsWrapper.insertAdjacentHTML("beforeend", html);
-}); 
-
-
-let selectedCard = [];
-select.addEventListener("change",() => {
-    amount.value = "";
-    let selectedOption = select.value;
+if(select != null){
     cards.forEach((element,index) => {
-        if(selectedOption == index){
-            let cardAlias = element.cardAlias.split("(");
-            cardType.value = cardAlias[0];
-            let newstring = cardAlias[1];
-            let splittedString = newstring.split(")");
-            country.value = splittedString[0];
-            amount.removeAttribute("disabled")
-            selectedCard.push(cards[selectedOption]);
-        }
-        else if(selectedOption == ""){
-            country.value = "";
-            cardType.value = "";
-            amount.setAttribute("disabled","");
-        }
+        let html =  ` <option value=${index}>${element.cardName}</option>`;
+        select.insertAdjacentHTML("beforeend", html);
+    
+        html = ` <div class="d-flex justify-content-between align-items-center border rounded-pill card-rate px-4 py-3">
+                    <div class="d-flex flex-md-fill flex-column flex-md-row ">
+                        <p class="mb-1 mb-md-0">${element.cardName}</p>
+                        <p class="mb-0 flex-fill text-center fw-bold">${element.cardAlias}</p>
+                    </div>
+                    <p class="mb-0 fw-bolder">₦${element.rate}</p>
+                </div>`
+        giftCardsWrapper.insertAdjacentHTML("beforeend", html);
+    }); 
+    
+    
+    let selectedCard = [];
+    select.addEventListener("change",() => {
+        amount.value = "";
+        let selectedOption = select.value;
+        cards.forEach((element,index) => {
+            if(selectedOption == index){
+                let cardAlias = element.cardAlias.split("(");
+                cardType.value = cardAlias[0];
+                let newstring = cardAlias[1];
+                let splittedString = newstring.split(")");
+                country.value = splittedString[0];
+                amount.removeAttribute("disabled")
+                selectedCard.push(cards[selectedOption]);
+            }
+            else if(selectedOption == ""){
+                country.value = "";
+                cardType.value = "";
+                amount.setAttribute("disabled","");
+            }
+        });
     });
-})
+
+    caculateRate.addEventListener("click",() => {
+        sellRateText.classList.remove("d-none");
+        selectedCard.forEach(element => {
+            if (amount.value != ""){
+                sellRate.textContent = "₦ " + caculateSellRate(amount.value,element.rate);
+            }
+            else {
+                alert("please input amount");
+                return;
+            }
+        });
+        selectedCard.length = 0;
+    });
+}
+
 
 function caculateSellRate(cardAmount,rate) {
     let sellRate;
@@ -145,19 +163,7 @@ function caculateSellRate(cardAmount,rate) {
     return sellRate;
 }
 
-caculateRate.addEventListener("click",() => {
-    sellRateText.classList.remove("d-none");
-    selectedCard.forEach(element => {
-        if (amount.value != ""){
-            sellRate.textContent = "₦ " + caculateSellRate(amount.value,element.rate);
-        }
-        else {
-            alert("please input amount");
-            return;
-        }
-    });
-    selectedCard.length = 0;
-});
+
 
 
 
