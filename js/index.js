@@ -8,6 +8,8 @@ let sellRate = document.querySelector("#sellRate");
 let buyRate = document.querySelector("#buyRate");
 let buyRateText = document.querySelector(".buy-rate");
 let sellRateText = document.querySelector(".sell-rate");
+let rateWrapper = document.querySelector(".rate-wrapper");
+
 
 
 let cards = 
@@ -128,7 +130,7 @@ if(select != null){
         let html =  ` <option value=${index}>${element.cardName}</option>`;
         select.insertAdjacentHTML("beforeend", html);
     
-        html = ` <div class="d-flex justify-content-between align-items-center border rounded-pill card-rate px-4 py-3">
+        html = ` <div class="d-flex justify-content-between align-items-center border rounded-5 card-rate px-4 py-3">
                     <div class="d-flex flex-md-fill flex-column flex-md-row ">
                         <p class="mb-1 mb-md-0">${element.cardName}</p>
                         <p class="mb-0 flex-fill text-center fw-bold">${element.cardAlias}</p>
@@ -162,19 +164,21 @@ if(select != null){
     });
 
     caculateRate.addEventListener("click",() => {
-        sellRateText.classList.remove("d-none");
-        buyRateText.classList.remove("d-none");
         selectedCard.forEach(element => {
             if (amount.value != ""){
+                rateWrapper.classList.remove("d-none");
+                sellRateText.classList.remove("d-none");
+                buyRateText.classList.remove("d-none");
                 sellRate.textContent = "₦ " + caculateSellRate(amount.value,element.sellRate);
                 buyRate.textContent = "₦ " + caculateBuyRate(amount.value,element.buyRate);
+                selectedCard.length = 0;
             }
             else {
                 alert("please input amount");
                 return;
             }
         });
-        selectedCard.length = 0;
+       
     });
 }
 
