@@ -137,6 +137,18 @@ body{
     width: 70%;
 }
 
+.sidebar {
+    background-color: var(--bg-secondary) !important;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 350px;
+}
+
+.main{
+    margin-left: 350px;
+}
+
 .hero-section{
     background: url(../images/cross.svg),url(../images/dots.svg),
         url(../images/cross-line.svg),url(../images/big-cross.svg);
