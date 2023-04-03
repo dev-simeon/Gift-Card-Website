@@ -17,64 +17,98 @@
 </head>
 
 <body class="body">
-    <main>
-        <section class="bg-accent">
-            <nav class="navbar navbar-expand-lg bg-accent fixed-top">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="text-decoration-none text-primary fw-bold fs-3" href="/">
-                            Gift<span>Card</span>
-                        </a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav gap-2 flex-fill justify-content-center mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link nav-link-lg text-primary" aria-current="page" href="./index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link nav-link-lg text-primary" aria-current="page" href="#">Our Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link nav-link-lg text-primary" aria-current="page" href="#">Why Choose Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a target="_blank" class="nav-link nav-link-lg text-primary" href="./rate.html">Rate</a>
-                            </li>
-                        </ul>
-        
-                        <ul class="navbar-nav gap-2">
-                            <li>
-                                <a type="button" class="btn btn-outline-primary" href="./login.html">Log In</a>
-                            </li>
-                            <li>
-                                <a class="btn btn-accent" 
-                                    type="button " href="./signUp.html">Register
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+    <nav class="navbar navbar-expand-lg bg-accent fixed-top">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="text-decoration-none text-primary fw-bold fs-3" href="/">
+                    Gift<span>Card</span>
+                </a>
+            </div>
+            <button type="button" class="btn d-block d-lg-none nav-btn" data-bs-toggle="offcanvas"
+                data-bs-target="#navmenu" aria-controls="offcanvasExample">
+                <span>
+                    <svg class="menu" width="22" height="22" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z"
+                            fill="white" />
+                    </svg>
+                </span>
+            </button>
+            <ul class="d-none d-lg-flex navbar-nav gap-2 flex-fill justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-lg text-primary" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-lg text-primary" aria-current="page" href="#">Our Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-lg text-primary" aria-current="page" href="#">Why Choose Us</a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link nav-link-lg text-primary" href="./rate.html">Rate</a>
+                </li>
+            </ul>
 
-            <section class="hero-section">
-                <div class="container d-flex flex-column align-items-center gap-4">
-                    <div class="hero-content text-white align-items-center
-                        text-center d-flex flex-column gap-2">
-                        <h1 class="mb-0 col-lg-11 heading">Trade Giftcards & Bitcoins at best rates in Nigeria.</h1>
-                        <p class="mb-0 col-lg-9">Join the leading peer-to-peer platform to 
-                            buy and sell Bitcoin using 350+ payment methods with 10 million 
-                            people just like you.
-                        </p>
-                    </div>
-                    
-                    <img class="hero-img img-fluid" src="images/hm-mb-mock.png" alt="">
+            <ul class="d-none d-lg-flex navbar-nav gap-2">
+                <li>
+                    <a type="button" class="btn btn-outline-primary" href="./login.html">Log In</a>
+                </li>
+                <li>
+                    <a class="btn btn-accent" 
+                        type="button " href="./signUp.html">Register
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="offcanvas offcanvas-end bg-accent" data-bs-scroll="true" id="navmenu">
+        <div class="offcanvas-header pe-5 pt-4 justify-content-end mt-1 px-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body align-items-center px-4 d-flex flex-column gap-4">
+            <ul class="navbar-nav gap-3">
+                <li class="nav-item">
+                    <a class="nav-link py-0 nav-link-lg text-primary" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="py-0 nav-link nav-link-lg text-primary" aria-current="page" href="#">Our Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="py-0 nav-link nav-link-lg text-primary" aria-current="page" href="#">Why Choose Us</a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" class="py-0 nav-link nav-link-lg text-primary" href="./rate.html">Rate</a>
+                </li>
+                
+                <ul class="navbar-nav gap-2">
+                    <li>
+                        <a type="button" class="btn btn-outline-primary" href="./login.html">Log In</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-accent" 
+                            type="button " href="./signUp.html">Register
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+        
+    </div>
+
+    <main>
+        <section class="hero-section bg-accent">
+            <div class="container d-flex flex-column align-items-center gap-4">
+                <div class="hero-content text-white align-items-center
+                    text-center d-flex flex-column gap-2">
+                    <h1 class="mb-0 col-lg-11 heading">Trade Giftcards & Bitcoins at best rates in Nigeria.</h1>
+                    <p class="mb-0 col-lg-9">Join the leading peer-to-peer platform to 
+                        buy and sell Bitcoin using 350+ payment methods with 10 million 
+                        people just like you.
+                    </p>
                 </div>
-            </section>
+                
+                <img class="hero-img img-fluid" src="images/undraw_data_trends_re_2cdy.svg" alt="">
+            </div>
         </section>
 
         <section class="d-flex flex-column gap-4 px-4 px-sm-0 section align-items-center">

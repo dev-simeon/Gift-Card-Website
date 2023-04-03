@@ -13,91 +13,88 @@
 </head>
 
 <body class="body">
-    <main class="">
-        <section class="bg-accent">
-            <nav class="navbar navbar-expand-lg bg-accent fixed-top">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="text-decoration-none text-primary fw-bold fs-3" href="/">
-                            Gift<span>Card</span>
+    <nav class="navbar navbar-expand-lg bg-accent fixed-top">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="text-decoration-none text-primary fw-bold fs-3" href="/">
+                    Gift<span>Card</span>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav gap-2 flex-fill justify-content-center mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-lg text-primary" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-lg text-primary" aria-current="page" href="#">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-lg text-primary" aria-current="page" href="#">Why Choose Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" class="nav-link nav-link-lg text-primary" href="/rate.html">Rate</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav gap-2">
+                    <li>
+                        <a type="button" class="btn btn-outline-primary" href="/login.html">Log In</a>
+                    </li>
+                    <li>
+                        <a class="btn btn-accent" 
+                            type="button " href="/signUp.html">Register
                         </a>
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav gap-2 flex-fill justify-content-center mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link nav-link-lg text-primary" aria-current="page" href="/index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link nav-link-lg text-primary" aria-current="page" href="#">Our Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link nav-link-lg text-primary" aria-current="page" href="#">Why Choose Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a target="_blank" class="nav-link nav-link-lg text-primary" href="/rate.html">Rate</a>
-                            </li>
-                        </ul>
-        
-                        <ul class="navbar-nav gap-2">
-                            <li>
-                                <a type="button" class="btn btn-outline-primary" href="/login.html">Log In</a>
-                            </li>
-                            <li>
-                                <a class="btn btn-accent" 
-                                    type="button " href="/signUp.html">Register
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="hero-section bg-accent">
+            <div class="container d-flex justify-content-center">
+                <div class="hero-content d-flex flex-column gap-4 col-sm-8 col-md-5 col-lg-4">
+                    <h1 class="mb-0 fw-bold text-center text-md-start text-white">Rate Caculator</h1>
+                    <form>
+                        <div class="mb-3">
+                            <select id="select" class="form-select" aria-label="Default select example">
+                                <option value="" selected>Select Card</option>
+                            </select>
+                        </div>
+                        <div class="d-flex mb-3 gap-3">
+                            <input id="country" type="text" placeholder="countries" 
+                                class="form-control" readonly
+                            >
+                            <input id="cardType" type="text" placeholder="card-type" 
+                                class="form-control" readonly
+                            >
+                        </div>
+                        <div class="mb-3">
+                            <input id="amount" value="" type="number" placeholder="amount" 
+                                class="form-control" disabled
+                            >
+                        </div>
 
-            <section class="hero-section">
-                <div class="container d-flex justify-content-center">
-                    <div class="hero-content d-flex flex-column gap-4 col-sm-8 col-md-5 col-lg-4">
-                        <h1 class="mb-0 fw-bold text-center text-md-start text-white">Rate Caculator</h1>
-                        <form>
-                            <div class="mb-3">
-                                <select id="select" class="form-select" aria-label="Default select example">
-                                    <option value="" selected>Select Card</option>
-                                </select>
+                        <div class="d-none d-flex rate-wrapper gap-5 mb-3">
+                            <div>
+                                <p class="mb-0 sell-rate d-none text-primary">Sell Rate:</p>
+                                <p class="mb-0 fs-4 fw-bold text-primary" id="sellRate"></p>
                             </div>
-                            <div class="d-flex mb-3 gap-3">
-                                <input id="country" type="text" placeholder="countries" 
-                                    class="form-control" readonly
-                                >
-                                <input id="cardType" type="text" placeholder="card-type" 
-                                    class="form-control" readonly
-                                >
+                            <div>
+                                <p class="mb-0 buy-rate d-none text-primary">Buy Rate:</p>
+                                <p class="mb-0 fs-4 fw-bold text-primary" id="buyRate"></p>
                             </div>
-                            <div class="mb-3">
-                                <input id="amount" value="" type="number" placeholder="amount" 
-                                    class="form-control" disabled
-                                >
-                            </div>
-
-                            <div class="d-none d-flex rate-wrapper gap-5 mb-3">
-                                <div>
-                                    <p class="mb-0 sell-rate d-none text-primary">Sell Rate:</p>
-                                    <p class="mb-0 fs-4 fw-bold text-primary" id="sellRate"></p>
-                                </div>
-                                <div>
-                                    <p class="mb-0 buy-rate d-none text-primary">Buy Rate:</p>
-                                    <p class="mb-0 fs-4 fw-bold text-primary" id="buyRate"></p>
-                                </div>
-                                
-                            </div>
-                            <button id="caculateRate" type="button" class="btn btn-accent">Caculate rates
-                            </button>
-                        </form>
-                    </div>
+                            
+                        </div>
+                        <button id="caculateRate" type="button" class="btn btn-accent">Caculate rates
+                        </button>
+                    </form>
                 </div>
-            </section>
+            </div>
         </section>
 
         <section class="container section d-flex flex-column gap-3">

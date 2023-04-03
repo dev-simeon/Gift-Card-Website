@@ -147,7 +147,7 @@ body{
 }
 
 .hero-img{
-    width: 50%;
+    width: 60%;
 }
 
 .heading{
@@ -199,6 +199,10 @@ body{
 }
 
 @media screen and (max-width: 767px) {
+    .body::before{
+        height: 63px;
+    }
+
     .card-rate{
         width: 100%;
     }
@@ -217,5 +221,35 @@ body{
         font-size: 35px;
     }
 }
+
+@media screen and (max-width: 575px) {
+    .offcanvas{
+        width: 350px !important;
+        max-width: 350px;
+    }
+
+    .hero-img{
+        width: 70%;
+    }
+
+    @media screen and (max-width: 430px) {
+        .offcanvas{
+            width: 87vw !important;
+            max-width: 87vw;
+        }
+    }
+}
+
+@media screen and (max-width: 449px) {
+    .hero-img{
+        width: 80%;
+    }
+
+    .heading{
+        font-size: 30px;
+    }
+}
+
+
 
 
