@@ -4,6 +4,7 @@
     --bg-primary: #fafafa;
     --bg-secondary: #1f2020;
     --bg-accent: #531eba;
+    --bg-accent-light: #cbb9f0;
     --bg-card-color: #f9f7fb;
 }
 
@@ -37,6 +38,10 @@ body{
 
 .bg-primary{
     background-color: var(--bg-primary)!important;
+}
+
+.bg-accent-light{
+    background-color: var(--bg-accent-light);
 }
 
 .btn-primary, .bg-accent{
@@ -108,6 +113,30 @@ body{
     color: var(--bg-accent) !important;
 }
 
+.sign-up-img{
+    background-image: url(../images/sign_up.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70%;
+}
+
+.login-img{
+    background-image: url(../images/login.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70%;
+}
+
+.forgot-password-img{
+    background-image: url(../images/forgot_password.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 70%;
+}
+
 .hero-section{
     background: url(../images/cross.svg),url(../images/dots.svg),
         url(../images/cross-line.svg),url(../images/big-cross.svg);
@@ -117,15 +146,13 @@ body{
     padding-bottom: 37px;
 }
 
+.hero-img{
+    width: 50%;
+}
+
 .heading{
     font-size: 60px;
     font-weight: 800;
-}
-
-@media screen and (min-width: 768px) {
-    .hero-img{
-        width: 50%;
-    }
 }
 
 .service-card{
