@@ -5,6 +5,8 @@ let cardType = document.querySelector("#cardType");
 let amount = document.querySelector("#amount");
 let caculateRate = document.querySelector("#caculateRate");
 let sellRate = document.querySelector("#sellRate");
+let buyRate = document.querySelector("#buyRate");
+let buyRateText = document.querySelector(".buy-rate");
 let sellRateText = document.querySelector(".sell-rate");
 
 
@@ -13,92 +15,110 @@ let cards =
     {
         cardName: "Visa Giftcard",
         cardAlias: "START CODE: 4034(USA)",
-        rate: 509
+        sellRate: 509,
+        buyRate: 600
     },
     {
         cardName: "Vanilla Giftcard",
         cardAlias: "START CODE: 4124(USA)",
-        rate: 384
+        sellRate: 384,
+        buyRate: 600
     },    
     {
         cardName: "Walmart Giftcard",
         cardAlias: "Physical Card(USA)",
-        rate: 363
+        sellRate: 363,
+        buyRate: 600
     },
     {
         cardName: "Target Giftcard",
         cardAlias: "E-code(USA)",
-        rate: -5
+        sellRate: -5,
+        buyRate: 600
     },
     {
         cardName: "Nordstrom Giftcard",
         cardAlias: "Large Card(USA)",
-        rate: 498
+        sellRate: 498,
+        buyRate: 600
     },
     {
         cardName: "Sephora Giftcard",
         cardAlias: "E-code(USA)",
-        rate: -5
+        sellRate: -5,
+        buyRate: 600
     },
     {
         cardName: "Ebay Giftcard",
         cardAlias: "Physical Card(USA)",
-        rate: 425
+        sellRate: 425,
+        buyRate: 600
     },
     {
         cardName: "Nike Giftcard",
         cardAlias: "E-code(USA)",
-        rate: -5
+        sellRate: -5,
+        buyRate: 600
     },
     {
         cardName: "Best Buy Giftcard",
         cardAlias: "Large Card(USA)",
-        rate: -5
+        sellRate: -5,
+        buyRate: 600
     },
     {
         cardName: "Apple store card Giftcard",
         cardAlias: "E-code(USA)",
-        rate: 373
+        sellRate: 373,
+        buyRate: 600
     },
     {
         cardName: "American Express Giftcard",
         cardAlias: "START CODE: 3779(USA)",
-        rate: 488
+        sellRate: 488,
+        buyRate: 600
     },
     {
         cardName: "Google Play Giftcard",
         cardAlias: "Physical Card(CANADA)",
-        rate: 311
+        sellRate: 311,
+        buyRate: 600
     },
     {
         cardName: "Steam Giftcard",
         cardAlias: "Large Card(European Union)",
-        rate: 597
+        sellRate: 597,
+        buyRate: 600
     },
     {
         cardName: "American Express Serve Giftcard",
         cardAlias: "START CODE: 3777(USA)",
-        rate: 425
+        sellRate: 425,
+        buyRate: 600
     },
     {
         cardName: "Amazon Giftcard",
         cardAlias: "Physical Card(CANADA)",
-        rate: 301
+        sellRate: 301,
+        buyRate: 600
     },
     {
         cardName: "ITunes Giftcard",
         cardAlias: "Physical Card(IRELAND)",
-        rate: -5
+        sellRate: -5,
+        buyRate: 600
     },
     {
         cardName: "Razor Gold Giftcard",
         cardAlias: "Physical Card(USA)",
-        rate: 566
+        sellRate: 566,
+        buyRate: 600
     },   
     {
         cardName: "Macy Giftcard",
         cardAlias: "Physical Card(USA)",
-        rate: 446
+        sellRate: 446,
+        buyRate: 600
     }                                                                                       
 ];
 
@@ -113,7 +133,7 @@ if(select != null){
                         <p class="mb-1 mb-md-0">${element.cardName}</p>
                         <p class="mb-0 flex-fill text-center fw-bold">${element.cardAlias}</p>
                     </div>
-                    <p class="mb-0 fw-bolder">₦${element.rate}</p>
+                    <p class="mb-0 fw-bolder">₦${element.sellRate}</p>
                 </div>`
         giftCardsWrapper.insertAdjacentHTML("beforeend", html);
     }); 
@@ -143,9 +163,11 @@ if(select != null){
 
     caculateRate.addEventListener("click",() => {
         sellRateText.classList.remove("d-none");
+        buyRateText.classList.remove("d-none");
         selectedCard.forEach(element => {
             if (amount.value != ""){
-                sellRate.textContent = "₦ " + caculateSellRate(amount.value,element.rate);
+                sellRate.textContent = "₦ " + caculateSellRate(amount.value,element.sellRate);
+                buyRate.textContent = "₦ " + caculateBuyRate(amount.value,element.buyRate);
             }
             else {
                 alert("please input amount");
@@ -163,6 +185,11 @@ function caculateSellRate(cardAmount,rate) {
     return sellRate;
 }
 
+function caculateBuyRate(cardAmount,rate) {
+    let buyRate;
+    buyRate = cardAmount * rate;
+    return buyRate;
+}
 
 
 
