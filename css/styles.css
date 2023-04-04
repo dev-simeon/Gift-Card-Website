@@ -2,7 +2,7 @@
 
 :root{
     --bg-primary: #fafafa;
-    --bg-secondary: #1f2020;
+    --bg-secondary: #444468f2;
     --bg-accent: #531eba;
     --bg-accent-light: #dccff833;
     --bg-card-color: #f9f7fb;
@@ -104,13 +104,20 @@ body{
 }
 
 .btn-accent:hover,
-.btn-outline-accent:hover,
-.btn-accent:active,
-.btn-outline-accent:active{
+.btn-accent:active
+{
     background-color: var(--bg-primary) !important;
     opacity: 0.98;
     border-color: var(--bg-primary) !important;
     color: var(--bg-accent) !important;
+}
+
+.btn-outline-accent:hover,
+.btn-outline-accent:active
+{
+    background-color: var(--bg-accent) !important;
+    color: var(--bg-primary) !important;
+    opacity: 0.98;
 }
 
 .sign-up-img{
@@ -142,11 +149,11 @@ body{
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 350px;
+    width: 300px !important;
 }
 
 .main{
-    margin-left: 350px;
+    margin-left: 300px;
 }
 
 .hero-section{
@@ -189,6 +196,10 @@ body{
 /********************************************** Mobile design *******************************/
 
 @media screen and (max-width: 991px) {
+    .main{
+        margin-left: 0;
+    }
+    
     .card-rate{
         width: 90%;
     }

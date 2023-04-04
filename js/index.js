@@ -9,8 +9,13 @@ let buyRate = document.querySelector("#buyRate");
 let buyRateText = document.querySelector(".buy-rate");
 let sellRateText = document.querySelector(".sell-rate");
 let rateWrapper = document.querySelector(".rate-wrapper");
-
-
+let heroSection = document.querySelector(".hero-section");
+let navbar = document.querySelector(".navbar");
+let brandName = document.querySelector(".navbar-brand");
+let menuButton = document.querySelector(".menu path");
+let navLinks = document.querySelectorAll(".nav-link-lg");
+let loginBtn = document.querySelector(".login-btn");
+let signUpButton = document.querySelector(".sign-up-btn");
 
 let cards = 
 [
@@ -130,7 +135,7 @@ if(select != null){
         let html =  ` <option value=${index}>${element.cardName}</option>`;
         select.insertAdjacentHTML("beforeend", html);
     
-        html = ` <div class="d-flex justify-content-between align-items-center border rounded-5 card-rate px-4 py-3">
+        html = ` <div class="d-flex justify-content-between align-items-center border rounded-4 card-rate px-4 py-3">
                     <div class="d-flex flex-md-fill flex-column flex-md-row ">
                         <p class="mb-1 mb-md-0">${element.cardName}</p>
                         <p class="mb-0 flex-fill text-center fw-bold">${element.cardAlias}</p>
@@ -183,6 +188,21 @@ if(select != null){
 }
 
 
+
+window.addEventListener("load", () => {
+    changeNavbarAppearance();
+});
+
+window.addEventListener("scroll",() => {
+    changeNavbarAppearance();
+});
+
+
+
+
+
+
+
 function caculateSellRate(cardAmount,rate) {
     let sellRate;
     sellRate = cardAmount * rate;
@@ -195,11 +215,31 @@ function caculateBuyRate(cardAmount,rate) {
     return buyRate;
 }
 
-
-
-
-
-
+function changeNavbarAppearance() {
+    if (heroSection.getBoundingClientRect().bottom <= 50) {
+        navbar.classList.replace("bg-accent","bg-white");
+        navbar.classList.add("shadow-sm");
+        brandName.classList.replace("text-primary","text-secondary");
+        menuButton.setAttribute("fill","var(--bg-accent)");
+        loginBtn.classList.replace("btn-outline-primary","btn-outline-accent");
+        signUpButton.classList.replace("btn-accent","btn-primary");
+        navLinks.forEach(element => {
+            element.classList.remove("text-primary")
+            element.style.color = "var(--bg-accent)";
+        });
+    } 
+    else {
+        brandName.classList.replace("text-secondary","text-primary");
+        navbar.classList.replace("bg-white","bg-accent");
+        navbar.classList.remove("shadow-sm");
+        menuButton.setAttribute("fill","var(--bg-primary)");
+        loginBtn.classList.replace("btn-outline-accent","btn-outline-primary");
+        signUpButton.classList.replace("btn-primary","btn-accent")
+        navLinks.forEach(element => {
+            element.classList.add("text-primary");
+        });
+    }
+};
 
 
 

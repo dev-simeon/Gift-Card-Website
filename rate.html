@@ -15,45 +15,79 @@
 <body class="body">
     <nav class="navbar navbar-expand-lg bg-accent fixed-top">
         <div class="container">
-            <div class="navbar-brand">
-                <a class="text-decoration-none text-primary fw-bold fs-3" href="/">
-                    Gift<span>Card</span>
-                </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <a class="navbar-brand text-decoration-none text-primary fw-bold fs-3" href="/">
+                Gift<span>Card</span>
+            </a>
+            <button type="button" class="btn d-block d-lg-none nav-btn" data-bs-toggle="offcanvas"
+                data-bs-target="#navmenu" aria-controls="offcanvasExample">
+                <span>
+                    <svg class="menu" width="22" height="22" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z"
+                            fill="var(--bg-primary)" />
+                    </svg>
+                </span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav gap-2 flex-fill justify-content-center mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-lg text-primary" aria-current="page" href="/index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-lg text-primary" aria-current="page" href="#">Our Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-lg text-primary" aria-current="page" href="#">Why Choose Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a target="_blank" class="nav-link nav-link-lg text-primary" href="/rate.html">Rate</a>
-                    </li>
-                </ul>
+            <ul class="d-none d-lg-flex navbar-nav gap-2 flex-fill justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-lg text-primary" aria-current="page" href="./index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-lg text-primary" aria-current="page" href="./index.html#ourServices">Our Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-lg text-primary" aria-current="page" href="./index.html#whyChooseUs">Why Choose Us</a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link nav-link-lg text-primary" href="./rate.html">Rate</a>
+                </li>
+            </ul>
 
+            <ul class="d-none d-lg-flex navbar-nav gap-2">
+                <li>
+                    <a type="button" class="btn login-btn btn-outline-primary" href="./login.html">Log In</a>
+                </li>
+                <li>
+                    <a class="btn btn-accent sign-up-btn" 
+                        type="button " href="./signUp.html">Register
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="offcanvas offcanvas-end bg-accent" data-bs-scroll="true" id="navmenu">
+        <div class="offcanvas-header pe-5 pt-4 justify-content-end mt-1 px-0">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body align-items-center px-4 d-flex flex-column gap-4">
+            <ul class="navbar-nav gap-3">
+                <li class="nav-item">
+                    <a class="nav-link py-0 text-primary" aria-current="page" href="./index.html#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="py-0 nav-link text-primary" aria-current="page" href="./index.html#ourServices">Our Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="py-0 nav-link text-primary" aria-current="page" href="./index.html#whyChooseUs">Why Choose Us</a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" class="py-0 nav-link text-primary" href="./rate.html">Rate</a>
+                </li>
+                
                 <ul class="navbar-nav gap-2">
                     <li>
-                        <a type="button" class="btn btn-outline-primary" href="/login.html">Log In</a>
+                        <a type="button" class="btn btn-outline-primary" href="./login.html">Log In</a>
                     </li>
                     <li>
                         <a class="btn btn-accent" 
-                            type="button " href="/signUp.html">Register
+                            type="button " href="./signUp.html">Register
                         </a>
                     </li>
                 </ul>
-            </div>
+            </ul>
         </div>
-    </nav>
+    </div>
+    
     <main>
         <section class="hero-section bg-accent">
             <div class="container d-flex justify-content-center">
