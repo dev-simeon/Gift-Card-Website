@@ -203,6 +203,10 @@ body{
     border-color: var(--bg-accent) !important;
 }
 
+.span{
+    font-size: 15px;
+}
+
 .service-card{
     background-color: var(--bg-card-color);
 }
