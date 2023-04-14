@@ -199,6 +199,10 @@ body{
     color: var(--bg-accent);
 }
 
+.sub-nav{
+    border-color: var(--bg-accent) !important;
+}
+
 .service-card{
     background-color: var(--bg-card-color);
 }
