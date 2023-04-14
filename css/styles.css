@@ -6,6 +6,10 @@
     --bg-accent: #531eba;
     --bg-accent-light: #dccff833;
     --bg-card-color: #f9f7fb;
+    --bg-grey: #F2F1F1;
+    --bg-sucess: #3DAC09;
+    --bg-danger: #FD3E3E;
+    --bg-light-grey: #E6E4E4;
 }
 
 .body::before{
@@ -28,6 +32,10 @@ body{
     color: var(--bg-primary)!important;
 }
 
+.text-success{
+    color: var(--bg-sucess) !important;
+}
+
 .text-dark{
     color: var(--bg-secondary)!important;
 }
@@ -38,6 +46,14 @@ body{
 
 .bg-primary{
     background-color: var(--bg-primary)!important;
+}
+
+.bg-grey{
+    background-color: var(--bg-grey);
+}
+
+.bg-light-grey{
+    background-color: var(--bg-light-grey);
 }
 
 .bg-accent-light{
@@ -145,15 +161,19 @@ body{
 }
 
 .sidebar {
-    background-color: var(--bg-secondary) !important;
+    background-color: var(--bg-primary) !important;
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 300px !important;
+    width: 250px !important;
+}
+
+.offcanvas{
+    width: 250px !important;
 }
 
 .main{
-    margin-left: 300px;
+    margin-left: 250px;
 }
 
 .hero-section{
@@ -197,11 +217,15 @@ body{
 
 @media screen and (max-width: 991px) {
     .main{
-        margin-left: 0;
+        margin-left: 84.375px;
     }
     
     .card-rate{
         width: 90%;
+    }
+
+    .sidebar{
+        width: auto !important;
     }
 
     .heading{
@@ -226,12 +250,21 @@ body{
         height: 63px;
     }
 
+    .main{
+        margin-left: 0;
+    }
+
     .card-rate{
         width: 100%;
     }
 
     .heading{
         font-size: 40px;
+    }
+
+    .wallet-icon{
+        width: 40px;
+        height: 40px;
     }
 }
 

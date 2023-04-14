@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="iDevWorks" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+    <title>Buy and Sell Giftcard and Bitcoin at Best Prices in Nigeria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body class="vh-100 bg-grey">
+    <nav class="vh-100 sidebar border-end d-none d-md-block py-4">
+        <div class="d-flex flex-column justify-content-between h-100">
+            <div class="d-flex flex-column gap-3 gap-lg-5">
+                <div class="d-flex justify-content-md-center px-4 px-lg-0 border-bottom mx-0 mx-lg-5 pb-3 pb-lg-5">
+                    <a class="text-decoration-none d-none d-lg-block text-dark fw-bold fs-2" href="./index.html">
+                        Gift<span class="text-secondary">Card</span>
+                    </a>
+                    <a class="text-decoration-none d-none d-md-block d-lg-none text-dark fw-bold fs-4" href="./index.html">
+                        G<span class="text-secondary">C</span>
+                    </a>
+                </div>
+                
+                <ul class="navbar-nav gap-4 w-100">
+                    <li class="nav-item">
+                        <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./dashboard.html">
+                            <i class="fa fa-arrow-trend-up fs-4"></i>
+                            <span class="d-none d-lg-block">Dashboard</span> 
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./createOffer.html">
+                            <i class="fa fa-code-pull-request fs-4"></i>
+                            <span class="d-none d-lg-block">Create Offer</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./transactions.html">
+                            <i class="fa fa-share fs-4"></i>
+                            <span class="d-none d-lg-block">Transactions</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./chat.html">
+                            <i class="fa fa-comment-dots fs-4"></i>
+                            <span class="d-none d-lg-block">Chat</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./settings.html">
+                            <i class="fa fa-gear fs-4"></i>
+                            <span class="d-none d-lg-block">Settings</span>
+                        </a>
+                    </li>
+                
+                </ul>
+            </div>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./login.html">
+                        <i class="fa fa-arrow-right-from-bracket fs-4"></i>
+                        <span class="d-none d-lg-block">Log out</span>
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <!-- Offcanvas menu -->
+    <div class="offcanvas bg-primary offcanvas-start" data-bs-scroll="true" id="sidebar" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header py-3 px-4">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="d-flex flex-column justify-content-between h-100">
+            <div class="d-flex flex-column gap-5">
+                <div class="d-flex justify-content-center border-bottom mx-5 pb-5">
+                    <a class="text-decoration-none text-dark fw-bold fs-4" href="./index.html">
+                        Gift<span class="text-secondary">Card</span>
+                    </a>
+                </div>
+                <ul class="navbar-nav gap-4 w-100">
+                    <li class="nav-item ">
+                        <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./dashboard.html">
+                            <i class="fa fa-arrow-trend-up"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./createOffer.html">
+                            <i class="fa fa-code-pull-request"></i>
+                            <span>Create Offer</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./transactions.html">
+                            <i class="fa fa-share"></i>
+                            <span>Transactions</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./chat.html">
+                            <i class="fa fa-comment-dots"></i>
+                            <span>Chat</span>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./settings.html">
+                            <i class="fa fa-gear"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="d-flex align-items-center gap-2 px-4 px-lg-5 nav-link py-0" href="./login.html">
+                        <i class="fa fa-arrow-right-from-bracket"></i>
+                        <span>Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Offcanvas end -->
+
+    <main class="main">
+        <div class="bg-primary d-flex align-items-center justify-content-between border-bottom py-3 px-4 px-md-5">
+            <div class="d-block d-md-none bg-primary container-fluid d-flex gap-2 align-items-center d-md-none">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <svg class="" width="22" height="22" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z"
+                                fill="var(--bg-secondary)" />
+                        </svg>
+                    </span>
+                </button>
+                <a class="text-decoration-none text-dark fw-bold fs-4" href="/">
+                    Gift<span class="text-secondary">Card</span>
+                </a>
+            </div>
+            <h3 class="mb-0 fw-bold d-none d-md-block">Dashboard</h3>
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center gap-1">
+                    <i class="fa-solid fa-wallet"></i>
+                    <p class="d-none d-md-block mb-0 fw-bold">₦23,000,000,000</p>
+                </div>
+                <i class="fa fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+
+        <section class="d-flex flex-column flex-xl-row">
+            <div class="d-block d-md-none px-4 pt-3 pb-1">
+                <h3 class="mb-0 fw-bold">Dashboard</h3>
+            </div>
+           
+            <section class="col-xl-7 d-flex flex-column gap-5 px-4 px-md-5 py-4">
+                <div class="card col-sm-7 col-xl-10 gap-4 bg-primary border-0 rounded-3 px-3 py-3">
+                    <div class="d-flex flex-column border-0 rounded-2">
+                        <p class="mb-0">wallet</p>
+                        <p class="mb-0 fs-4 fw-bold">₦23,000,000,000</p>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a class="text-decoration-none text-dark d-flex flex-column" href="">
+                            <span>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M25.0001 45.8334C36.506 45.8334 45.8334 36.506 45.8334 25C45.8334 13.4941 36.506 4.16669 25.0001 4.16669C13.4941 4.16669 4.16675 13.4941 4.16675 25C4.16675 36.506 13.4941 45.8334 25.0001 45.8334Z"
+                                        fill="#F2F1F1" stroke="#F2F1F1" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M25 16.6667V33.3334" stroke="black" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M16.6667 25H33.3334" stroke="black" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>Top-up</span>
+                        </a>
+                        <a class="text-decoration-none text-dark d-flex flex-column" href="">
+                            <span>
+                                <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M25.5001 45.8334C37.006 45.8334 46.3334 36.506 46.3334 25C46.3334 13.4941 37.006 4.16669 25.5001 4.16669C13.9941 4.16669 4.66675 13.4941 4.66675 25C4.66675 36.506 13.9941 45.8334 25.5001 45.8334Z"
+                                        fill="#F2F1F1" stroke="#F2F1F1" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M17.1667 25H33.8334" stroke="black" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span>Withdraw</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-sm-10 col-md-9 col-lg-8 d-flex flex-column d-xl-none gap-2">
+                    <div class="d-flex justify-content-between ">
+                        <h5 class="mb-0 fw-bold">Recent Offers</h5>
+                        <a class="text-decoration-none text-secondary" href="./transactions.html">View all</a>
+                    </div>
+                    <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                        <img class="wallet-icon img-fluid" src="./images/wallet_icon.svg" alt="">
+                        <div class="d-flex justify-content-between flex-fill">
+                            <div class="d-flex flex-column gap-1">
+                                <p class="mb-0 d-flex flex-column">
+                                    <span>
+                                        Lorem ipsum dolor sit amet
+                                    </span>
+                                    <span>
+                                        adipisicing elit, Laborum, velit.
+                                    </span>
+                                </p>
+                                <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                            </div>
+                            <p class="mb-0 text-success">₦5000</p>
+                        </div>
+                    </div>
+                
+                    <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                        <img class="wallet-icon img-fluid" src="./images/wallet_icon.svg" alt="">
+                        <div class="d-flex justify-content-between flex-fill">
+                            <div class="d-flex flex-column gap-1">
+                                <p class="mb-0 d-flex flex-column">
+                                    <span>
+                                        Lorem ipsum dolor sit amet
+                                    </span>
+                                    <span>
+                                        adipisicing elit, Laborum, velit.
+                                    </span>
+                                </p>
+                                <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                            </div>
+                            <p class="mb-0 text-danger">₦5000</p>
+                        </div>
+                    </div>
+                
+                    <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                        <img class="wallet-icon img-fluid" src="./images/wallet_icon.svg" alt="">
+                        <div class="d-flex justify-content-between flex-fill">
+                            <div class="d-flex flex-column gap-1">
+                                <p class="mb-0 d-flex flex-column">
+                                    <span>
+                                        Lorem ipsum dolor sit amet
+                                    </span>
+                                    <span>
+                                        adipisicing elit, Laborum, velit.
+                                    </span>
+                                </p>
+                                <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                            </div>
+                            <p class="mb-0 text-success">₦5000</p>
+                        </div>
+                    </div>
+                
+                    <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                        <img class="wallet-icon img-fluid" src="./images/wallet_icon.svg" alt="">
+                        <div class="d-flex justify-content-between flex-fill">
+                            <div class="d-flex flex-column gap-1">
+                                <p class="mb-0 d-flex flex-column">
+                                    <span>
+                                        Lorem ipsum dolor sit amet
+                                    </span>
+                                    <span>
+                                        adipisicing elit, Laborum, velit.
+                                    </span>
+                                </p>
+                                <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                            </div>
+                            <p class="mb-0 text-danger">₦5000</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-sm-10 col-lg-9 col-xl-12 bg-light-grey d-flex flex-column gap-2 rounded-3 px-4 py-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0 fw-bold">Recent Transaction</h5>
+                        <a class="text-decoration-none text-secondary" href="./transactions.html">View all</a>
+                    </div>
+            
+                    <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                        <img class="wallet-icon img-fluid" src="./images/wallet_icon.svg" alt="">
+                        <div class="d-flex justify-content-between flex-fill">
+                            <div class="d-flex flex-column gap-1">
+                                <p class="mb-0 d-flex flex-column">
+                                    <span>
+                                        Lorem ipsum dolor sit amet
+                                    </span>
+                                    <span>
+                                        adipisicing elit, Laborum, velit.
+                                    </span>
+                                </p>
+                                <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                            </div>
+                            <p class="mb-0 text-success">₦5000</p>
+                        </div>
+                    </div>
+            
+                    <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                        <img class="wallet-icon img-fluid" src="./images/wallet_icon.svg" alt="">
+                        <div class="d-flex justify-content-between flex-fill">
+                            <div class="d-flex flex-column gap-1">
+                                <p class="mb-0 d-flex flex-column">
+                                    <span>
+                                        Lorem ipsum dolor sit amet
+                                    </span>
+                                    <span>
+                                        adipisicing elit, Laborum, velit.
+                                    </span>
+                                </p>
+                                <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                            </div>
+                            <p class="mb-0 text-danger">₦5000</p>
+                        </div>
+                    </div>
+            
+                    <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                        <img class="wallet-icon img-fluid" src="./images/wallet_icon.svg" alt="">
+                        <div class="d-flex justify-content-between flex-fill">
+                            <div class="d-flex flex-column gap-1">
+                                <p class="mb-0 d-flex flex-column">
+                                    <span>
+                                        Lorem ipsum dolor sit amet
+                                    </span>
+                                    <span>
+                                        adipisicing elit, Laborum, velit.
+                                    </span>
+                                </p>
+                                <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                            </div>
+                            <p class="mb-0 text-success">₦5000</p>
+                        </div>
+                    </div>
+            
+                    <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                        <img class="wallet-icon img-fluid" src="./images/wallet_icon.svg" alt="">
+                        <div class="d-flex justify-content-between flex-fill">
+                            <div class="d-flex flex-column gap-1">
+                                <p class="mb-0 d-flex flex-column">
+                                    <span>
+                                        Lorem ipsum dolor sit amet
+                                    </span>
+                                    <span>
+                                        adipisicing elit, Laborum, velit.
+                                    </span>
+                                </p>
+                                <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                            </div>
+                            <p class="mb-0 text-danger">₦5000</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="d-none d-xl-flex flex-column gap-2 col-xl-5 pe-5 py-4">
+                <div class="d-flex justify-content-between ">
+                    <h5 class="mb-0 fw-bold">Recent Offers</h5>
+                    <a class="text-decoration-none text-secondary" href="./transactions.html">View all</a>
+                </div>
+                <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                    <img class="img-fluid" src="./images/wallet_icon.svg" alt="">
+                    <div class="d-flex justify-content-between flex-fill">
+                        <div class="d-flex flex-column gap-1">
+                            <p class="mb-0 d-flex flex-column">
+                                <span>
+                                    Lorem ipsum dolor sit amet
+                                </span>
+                                <span>
+                                    adipisicing elit, Laborum, velit.
+                                </span>
+                            </p>
+                            <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                        </div>
+                        <p class="mb-0 text-success">₦5000</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                    <img class="img-fluid" src="./images/wallet_icon.svg" alt="">
+                    <div class="d-flex justify-content-between flex-fill">
+                        <div class="d-flex flex-column gap-1">
+                            <p class="mb-0 d-flex flex-column">
+                                <span>
+                                    Lorem ipsum dolor sit amet
+                                </span>
+                                <span>
+                                    adipisicing elit, Laborum, velit.
+                                </span>
+                            </p>
+                            <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                        </div>
+                        <p class="mb-0 text-danger">₦5000</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                    <img class="img-fluid" src="./images/wallet_icon.svg" alt="">
+                    <div class="d-flex justify-content-between flex-fill">
+                        <div class="d-flex flex-column gap-1">
+                            <p class="mb-0 d-flex flex-column">
+                                <span>
+                                    Lorem ipsum dolor sit amet
+                                </span>
+                                <span>
+                                    adipisicing elit, Laborum, velit.
+                                </span>
+                            </p>
+                            <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                        </div>
+                        <p class="mb-0 text-success">₦5000</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">
+                    <img class="img-fluid" src="./images/wallet_icon.svg" alt="">
+                    <div class="d-flex justify-content-between flex-fill">
+                        <div class="d-flex flex-column gap-1">
+                            <p class="mb-0 d-flex flex-column">
+                                <span>
+                                    Lorem ipsum dolor sit amet
+                                </span>
+                                <span>
+                                    adipisicing elit, Laborum, velit.
+                                </span>
+                            </p>
+                            <p class="mb-0">Friday, April 7, 2023 08:23am</p>
+                        </div>
+                        <p class="mb-0 text-danger">₦5000</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        
+
+    </main>
+   
+
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
