@@ -160,6 +160,10 @@ body{
     width: 70%;
 }
 
+.form-label{
+    font-size: 15px;
+}
+
 .sidebar {
     background-color: var(--bg-primary) !important;
     position: fixed;
