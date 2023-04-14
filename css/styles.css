@@ -194,6 +194,11 @@ body{
     font-weight: 800;
 }
 
+.text-small{
+    font-size: 14px;
+    color: var(--bg-accent);
+}
+
 .service-card{
     background-color: var(--bg-card-color);
 }

@@ -17,8 +17,8 @@
 <body class="vh-100 bg-grey">
     <nav class="vh-100 sidebar border-end d-none d-md-block py-4">
         <div class="d-flex flex-column justify-content-between h-100">
-            <div class="d-flex flex-column gap-3 gap-lg-5">
-                <div class="d-flex justify-content-md-center px-4 px-lg-0 border-bottom mx-0 mx-lg-5 pb-3 pb-lg-5">
+            <div class="d-flex flex-column gap-5">
+                <div class="d-flex justify-content-md-center px-4 px-lg-0 border-bottom mx-0 mx-lg-5 pb-4">
                     <a class="text-decoration-none d-none d-lg-block text-dark fw-bold fs-2" href="./index.html">
                         Gift<span class="text-secondary">Card</span>
                     </a>
@@ -77,14 +77,14 @@
     </nav>
 
     <!-- Offcanvas menu -->
-    <div class="offcanvas bg-primary offcanvas-start" data-bs-scroll="true" id="sidebar2"
+    <div class="offcanvas bg-primary offcanvas-start" data-bs-scroll="true" id="sidebar"
         aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header py-3 px-4">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="d-flex flex-column justify-content-between h-100">
             <div class="d-flex flex-column gap-5">
-                <div class="d-flex justify-content-center border-bottom mx-5 pb-5">
+                <div class="d-flex justify-content-center border-bottom mx-5 pb-4">
                     <a class="text-decoration-none text-dark fw-bold fs-4" href="./index.html">
                         Gift<span class="text-secondary">Card</span>
                     </a>
@@ -139,7 +139,7 @@
     <main class="main">
         <div class="bg-primary d-flex align-items-center justify-content-between border-bottom py-3 px-4 px-md-5">
             <div class="d-block d-md-none bg-primary d-flex gap-2 align-items-center d-md-none">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="sidebar2"
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon">
                         <svg class="" width="22" height="22" viewBox="0 0 48 32" fill="none"
@@ -163,6 +163,21 @@
                 <i class="fa fa-ellipsis-vertical"></i>
             </div>
         </div>
+
+        <section>
+            <ul class="nav nav-tabs bg-primary px-4 gap-5 pt-3 pb-1 px-lg-5">
+                <li class="nav-item">
+                    <a class="nav-link px-0 py-0 border-bottom border-3" href="#">General</a>
+                </li>
+                <li class="nav-item">
+                    <a class="px-0 py-0 nav-link" href="#">Change Password</a>
+                </li>
+            </ul>
+            <div class="d-block d-md-none px-4 pt-3 pb-1">
+                <h3 class="mb-0 fw-bold">Settings</h3>
+            </div>
+
+        </section>
     </main>
 
 
