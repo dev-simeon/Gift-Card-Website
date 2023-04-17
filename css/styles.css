@@ -28,6 +28,12 @@ body{
     padding-bottom: 5rem;
 }
 
+p.span{
+    line-height: 1.5em;
+    height: 3em;
+    overflow: hidden;
+}
+
 .text-primary{
     color: var(--bg-primary)!important;
 }
@@ -188,9 +194,11 @@ body{
     height: calc(100vh - 81px);
 }
 
-.chat,
-.form
-{
+.chat{
+    width: 430px;
+}
+
+.form{
     width: 400px;
 }
 
@@ -292,6 +300,10 @@ body{
 
     .heading{
         font-size: 40px;
+    }
+
+    .chat{
+        width: 100%;
     }
 
     .wallet-icon{
