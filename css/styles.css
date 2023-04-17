@@ -183,8 +183,15 @@ body{
 .main{
     margin-left: 250px;
 }
+
 .chat-wrapper{
     height: calc(100vh - 81px);
+}
+
+.chat,
+.form
+{
+    width: 400px;
 }
 
 .hero-section{
@@ -210,9 +217,10 @@ body{
     color: var(--bg-accent);
 }
 
-.sub-nav{
+.sub-nav.active{
     border-color: var(--bg-accent) !important;
 }
+
 
 .span{
     font-size: 15px;
@@ -324,6 +332,10 @@ body{
 @media screen and (max-width: 449px) {
     .hero-img{
         width: 80%;
+    }
+
+    .form{
+        width: 100%;
     }
 
     .heading{

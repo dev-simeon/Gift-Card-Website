@@ -137,26 +137,32 @@
     <!-- Offcanvas end -->
 
     <main class="main">
-        <div class="d-block d-md-none bg-primary d-flex gap-2 align-items-center d-md-none">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                    <svg class="" width="22" height="22" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z"
-                            fill="var(--bg-secondary)" />
-                    </svg>
-                </span>
-            </button>
-            <a class="text-decoration-none text-dark fw-bold fs-4" href="/">
-                Gift<span class="text-secondary">Card</span>
-            </a>
+        <div class="bg-primary py-3 px-4 d-flex d-md-none align-items-center justify-content-between">
+            <div class="d-flex gap-2 align-items-center">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <svg class="" width="22" height="22" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z"
+                                fill="var(--bg-secondary)" />
+                        </svg>
+                    </span>
+                </button>
+                <a class="text-decoration-none text-dark fw-bold fs-4" href="/">
+                    Gift<span class="text-secondary">Card</span>
+                </a>
+            </div>
+            <div>
+                <i class="fa fa-ellipsis-vertical"></i>
+            </div>
         </div>
+        
         <section class="d-flex vh-100">
-            <section class="chat h-100 col-sm-12 col-md-6 col-lg-5 bg-primary border border-start-0">
+            <section class="chat d-flex flex-column h-100 bg-primary border border-start-0">
                 <div class="d-flex flex-column gap-3 pb-3 py-4 px-4">
                     <div class="d-flex justify-content-between align-items-center">
                         <h5 class="fw-bold">Chat</h5>
-                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="44" height="44" rx="22" fill="#F2F1F1" />
                             <path
                                 d="M21 14H14C13.4696 14 12.9609 14.2107 12.5858 14.5858C12.2107 14.9609 12 15.4696 12 16V30C12 30.5304 12.2107 31.0391 12.5858 31.4142C12.9609 31.7893 13.4696 32 14 32H28C28.5304 32 29.0391 31.7893 29.4142 31.4142C29.7893 31.0391 30 30.5304 30 30V23"
@@ -166,13 +172,9 @@
                                 d="M28.5 12.5002C28.8978 12.1024 29.4374 11.8789 30 11.8789C30.5626 11.8789 31.1022 12.1024 31.5 12.5002C31.8978 12.8981 32.1213 13.4376 32.1213 14.0002C32.1213 14.5628 31.8978 15.1024 31.5 15.5002L22 25.0002L18 26.0002L19 22.0002L28.5 12.5002Z"
                                 stroke="#531EBA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
                             />
-                        </svg>
+                        </svg> -->
                     </div>
                     <input class="form-control bg-grey" type="search" placeholder="search" name="search" id="search">
-                </div>
-                <div class="d-flex justify-content-between align-items-center py-3 px-4 border border-start-0 border-end-0">
-                    <p class="mb-0">Archived</p>
-                    <p class="fw-bold mb-0">2</p>
                 </div>
                 <div class="d-flex flex-column gap-3 px-4 py-3">
                     <div class="d-flex align-items-center gap-3">
@@ -269,7 +271,7 @@
                 </div>
                
             </section>
-            <section class="d-none d-md-block h-100">
+            <section class="d-none d-md-block h-100 flex-fill">
                 <div class="bg-primary px-4 px-lg-5 py-3 border-bottom d-flex justify-content-between align-items-center">
                     <div class="d-flex align-items-center gap-3">
                         <img src="images/Vector.svg" alt="">
@@ -289,7 +291,7 @@
                         <div class="px-4 px-lg-5">
                             <div class="d-flex gap-2 align-items-start">
                                 <img class="img-fluid" src="images/Vector.svg" alt="">
-                                <div class="d-flex flex-column gap-1 col-lg-8">
+                                <div class="d-flex flex-column gap-1 col-lg-9">
                                     <p class="small-text mb-0 p-3 bg-primary rounded-0 rounded-end 
                                         rounded-bottom">Lorem ipsum dolor sit amet consectetur,
                                         adipisicing elit, mollitiaeos.
@@ -301,7 +303,7 @@
                         </div>
                         <div class="px-4 px-lg-5">
                             <div class="d-flex gap-2 align-items-start justify-content-end">
-                                <div class="d-flex flex-column gap-1 col-lg-8">
+                                <div class="d-flex flex-column gap-1 col-lg-9">
                                     <p class="small-text text-primary mb-0 p-3 bg-accent rounded-0 rounded-start 
                                         rounded-bottom">Lorem ipsum dolor sit amet
                                         consectetur,

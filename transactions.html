@@ -141,14 +141,13 @@
 
 
     <!-- Fund wallet -->
-    <div class="offcanvas bg-primary offcanvas-end gap-1" data-bs-scroll="true" id="fundWallet">
+    <div class="offcanvas bg-primary offcanvas-end gap-1" data-bs-backdrop="static" data-bs-scroll="true" id="fundWallet">
         <div class="offcanvas-header py-3 px-4">
             <h6 class="mb-0 fw-bold">Fund Wallet</h6>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
             </button>
         </div>
         <div class="px-4 d-flex flex-column gap-2">
-            <p class="mb-0">Enter details to pay</p>
             <div>
               <label for="cardNumber" class="form-label mb-1">Card Number</label>
               <input type="number" class="form-control bg-grey" id="cardNumber" placeholder="0000 0000 0000" />
@@ -174,7 +173,7 @@
 
             <div class="d-flex gap-2">
                 <button class="btn btn-primary">Deposit</button>
-                <button class="btn btn-outline-accent">Cancel</button>
+                <button class="btn btn-outline-accent" data-bs-dismiss="offcanvas">Cancel</button>
             </div>
         </div>
     </div>
@@ -211,7 +210,7 @@
         </div>
 
         <section class="py-4 px-4 px-md-5">
-            <div class="d-flex flex-column gap-4 col-sm-9 col-md-8 col-lg-7">
+            <div class="d-flex flex-column gap-3 col-sm-9 col-md-8 col-lg-7">
                 <div class="align-self-end">
                     <button data-bs-toggle="offcanvas" data-bs-target="#fundWallet"
                         aria-expanded="false" aria-label="Toggle navigation" type="button" class="btn btn-primary">Fund Wallet

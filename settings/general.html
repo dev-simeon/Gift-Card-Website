@@ -166,15 +166,15 @@
 
         <ul class="nav border-bottom bg-primary px-4 gap-3 pt-3 px-md-5">
             <li class="nav-item">
-                <a class="text-dark text-small sub-nav nav-link px-0 pt-0 mb-0 pb-3 border-0 border-bottom border-3" href="./general.html">General</a>
+                <a class="text-dark general-btn text-small sub-nav active nav-link px-0 pt-0 pb-3 border-0 border-bottom border-3" href="#general">General</a>
             </li>
             <li class="nav-item">
-                <a class="text-dark sub-nav text-small px-0 py-0 nav-link" href="./changePassword.html">Change Password</a>
+                <a class="text-dark change-password-btn sub-nav border-0 text-small px-0 pt-0 pb-3 nav-link" href="#changePassword">Change Password</a>
             </li>
         </ul>
 
-        <section class="py-4 px-4 px-md-5">
-            <form class="bg-primary p-4 rounded-3 border d-flex flex-column gap-3 col-sm-9 col-md-7 col-lg-6">
+        <section id="general" class="py-4 px-4 px-md-5 form">
+            <form class="bg-primary p-4 rounded-3 border d-flex flex-column gap-3">
                 <div class="d-flex flex-column gap-1 border-bottom pb-3">
                     <h5 class="fw-bold mb-0">General Settings</h5>
                     <p class="mb-0 text-small text-dark">Update your profile and how people can contact you generally.</p>
@@ -200,6 +200,31 @@
                 </div>
                 <div>
                     <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="changePassword" class="py-4 px-4 px-md-5 form d-none">
+            <form class="bg-primary p-4 rounded-3 border d-flex flex-column gap-3">
+                <div class="d-flex flex-column gap-1 border-bottom pb-3">
+                    <h5 class="fw-bold mb-0">Change Password</h5>
+                    <p class="mb-0 text-small text-dark">Update your profile and how people can contact you generally.
+                    </p>
+                </div>
+                <div>
+                    <label for="oldPassword" class="form-label mb-1">Old Password</label>
+                    <input type="password" class="form-control" id="oldPassword">
+                </div>
+                <div>
+                    <label for="newPassword" class="form-label mb-1">New Password</label>
+                    <input type="password" class="form-control" id="newPassword">
+                </div>
+                <div>
+                    <label for="confirmPassword" class="form-label mb-1">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Change Password</button>
                 </div>
             </form>
         </section>

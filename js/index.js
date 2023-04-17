@@ -16,6 +16,32 @@ let menuButton = document.querySelector(".menu path");
 let navLinks = document.querySelectorAll(".nav-link-lg");
 let loginBtn = document.querySelector(".login-btn");
 let signUpButton = document.querySelector(".sign-up-btn");
+let generalSettingsPage = document.querySelector("#general");
+let changePasswordPage = document.querySelector("#changePassword");
+let changePasswordPageButton = document.querySelector(".change-password-btn");
+let generalSettingsPageButton = document.querySelector(".general-btn");
+
+changePasswordPageButton.addEventListener("click",() => {
+    changePasswordPage.classList.remove("d-none");
+    changePasswordPageButton.classList.add("active");
+    changePasswordPageButton.classList.add("border-3");
+    changePasswordPageButton.classList.add("border-bottom");
+    generalSettingsPageButton.classList.remove("active");
+    generalSettingsPageButton.classList.remove("border-3");
+    generalSettingsPageButton.classList.remove("border-bottom");
+    generalSettingsPage.classList.add("d-none");
+})
+
+generalSettingsPageButton.addEventListener("click", () => {
+    generalSettingsPage.classList.remove("d-none");
+    generalSettingsPageButton.classList.add("active");
+    generalSettingsPageButton.classList.add("border-3");
+    generalSettingsPageButton.classList.add("border-bottom");
+    changePasswordPageButton.classList.remove("active");
+    changePasswordPageButton.classList.remove("border-bottom");
+    changePasswordPageButton.classList.remove("border-3");
+    changePasswordPage.classList.add("d-none");
+})
 
 let cards = 
 [
