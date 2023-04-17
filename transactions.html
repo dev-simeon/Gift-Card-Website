@@ -138,6 +138,48 @@
     </div>
     <!-- Offcanvas end -->
 
+
+
+    <!-- Fund wallet -->
+    <div class="offcanvas bg-primary offcanvas-end gap-1" data-bs-scroll="true" id="fundWallet">
+        <div class="offcanvas-header py-3 px-4">
+            <h6 class="mb-0 fw-bold">Fund Wallet</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+            </button>
+        </div>
+        <div class="px-4 d-flex flex-column gap-2">
+            <p class="mb-0">Enter details to pay</p>
+            <div>
+              <label for="cardNumber" class="form-label mb-1">Card Number</label>
+              <input type="number" class="form-control bg-grey" id="cardNumber" placeholder="0000 0000 0000" />
+            </div>
+            <div class="d-flex gap-2">
+                <div>
+                    <label for="validThru" class="form-label mb-1">Valid thru</label>
+                    <input type="number" class="form-control bg-grey" id="validThru" placeholder="MM / yy" />
+                </div>
+                <div>
+                    <label for="cvc" class="form-label mb-1">CVC</label>
+                    <input type="number" class="form-control bg-grey" id="cvc" placeholder="123" />
+                </div>
+            </div>
+            <div>
+                <label for="amount" class="form-label mb-1">Amount</label>
+                <input type="number" class="form-control bg-grey" id="amount" />
+            </div>
+            <div>
+                <label for="cardholder" class="form-label mb-1">Cardholder Name</label>
+                <input type="text" class="form-control bg-grey" id="cardholder" />
+            </div>
+
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary">Deposit</button>
+                <button class="btn btn-outline-accent">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- Fund wallet -->
+
     <main class="main">
         <div class="bg-primary d-flex align-items-center justify-content-between border-bottom py-3 px-4 px-md-5">
             <div class="d-block d-md-none bg-primary d-flex gap-2 align-items-center d-md-none">
@@ -167,7 +209,9 @@
         <section class="py-4 px-4 px-md-5">
             <div class="d-flex flex-column gap-4 col-sm-9 col-md-8 col-lg-7">
                 <div class="align-self-end">
-                    <button type="button" class="btn btn-primary">Fund Wallet</button>
+                    <button data-bs-toggle="offcanvas" data-bs-target="#fundWallet"
+                        aria-expanded="false" aria-label="Toggle navigation" type="button" class="btn btn-primary">Fund Wallet
+                    </button>
                 </div>
                 <div class="d-flex flex-column gap-2">
                     <div class="d-flex flex-row align-items-center gap-3 bg-primary card border-0 px-3 py-3 rounded-3">

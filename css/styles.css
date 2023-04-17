@@ -176,6 +176,10 @@ body{
     width: 250px !important;
 }
 
+.offcanvas.offcanvas-end{
+    width: 350px !important;
+}
+
 .main{
     margin-left: 250px;
 }
@@ -306,7 +310,8 @@ body{
     }
 
     @media screen and (max-width: 430px) {
-        .offcanvas{
+        .offcanvas,.offcanvas.offcanvas-end
+        {
             width: 87vw !important;
             max-width: 87vw;
         }
