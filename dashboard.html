@@ -132,6 +132,46 @@
     </div>
     <!-- Offcanvas end -->
 
+    <!-- Fund wallet -->
+    <div class="offcanvas bg-primary offcanvas-end gap-1" data-bs-scroll="true" id="fundWallet">
+        <div class="offcanvas-header py-3 px-4">
+            <h6 class="mb-0 fw-bold">Fund Wallet</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+            </button>
+        </div>
+        <div class="px-4 d-flex flex-column gap-2">
+            <p class="mb-0">Enter details to pay</p>
+            <div>
+                <label for="cardNumber" class="form-label mb-1">Card Number</label>
+                <input type="number" class="form-control bg-grey" id="cardNumber" placeholder="0000 0000 0000" />
+            </div>
+            <div class="d-flex gap-2">
+                <div>
+                    <label for="validThru" class="form-label mb-1">Valid thru</label>
+                    <input type="number" class="form-control bg-grey" id="validThru" placeholder="MM / yy" />
+                </div>
+                <div>
+                    <label for="cvc" class="form-label mb-1">CVC</label>
+                    <input type="number" class="form-control bg-grey" id="cvc" placeholder="123" />
+                </div>
+            </div>
+            <div>
+                <label for="amount" class="form-label mb-1">Amount</label>
+                <input type="number" class="form-control bg-grey" id="amount" />
+            </div>
+            <div>
+                <label for="cardholder" class="form-label mb-1">Cardholder Name</label>
+                <input type="text" class="form-control bg-grey" id="cardholder" />
+            </div>
+    
+            <div class="d-flex gap-2">
+                <button class="btn btn-primary">Deposit</button>
+                <button class="btn btn-outline-accent">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <!-- Fund wallet -->
+
     <main class="main">
         <div class="bg-primary d-flex align-items-center justify-content-between border-bottom py-3 px-4 px-md-5">
             <div class="d-block d-md-none bg-primary d-flex gap-2 align-items-center d-md-none">
@@ -170,7 +210,8 @@
                         <p class="mb-0 fs-4 fw-bold">₦23,000,000,000</p>
                     </div>
                     <div class="d-flex gap-3">
-                        <a class="text-decoration-none text-dark d-flex flex-column align-items-center" href="">
+                        <a data-bs-toggle="offcanvas"
+                        aria-expanded="false" aria-label="Toggle navigation" class="text-decoration-none text-dark d-flex flex-column align-items-center" href="#fundWallet">
                             <span>
                                 <svg width="45" height="45" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
