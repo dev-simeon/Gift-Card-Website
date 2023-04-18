@@ -25,18 +25,6 @@ let withdrawalMenu = document.querySelector("#withdrawOffcanvas");
 let deposit = document.querySelector("#deposit");
 let depositMenu = document.querySelector("#depositOffcanvas");
 
-withdrawal.addEventListener("click", () => {
-    withdrawalMenu.classList.remove("d-none");
-    depositMenu.classList.add("d-none");
-});
-
-deposit.addEventListener("click", () => {
-    depositMenu.classList.remove("d-none");
-    withdrawalMenu.classList.add("d-none");
-});
-
-
-
 
 changePasswordPageButton.addEventListener("click",() => {
     changePasswordPage.classList.remove("d-none");
@@ -59,6 +47,17 @@ generalSettingsPageButton.addEventListener("click", () => {
     changePasswordPageButton.classList.remove("border-3");
     changePasswordPage.classList.add("d-none");
 })
+
+
+withdrawal.addEventListener("click", () => {
+    withdrawalMenu.classList.remove("d-none");
+    depositMenu.classList.add("d-none");
+});
+
+deposit.addEventListener("click", () => {
+    depositMenu.classList.remove("d-none");
+    withdrawalMenu.classList.add("d-none");
+});
 
 let cards = 
 [
