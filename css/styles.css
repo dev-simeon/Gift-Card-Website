@@ -271,6 +271,10 @@ p.span{
     .heading{
         font-size: 45px;
     }
+
+    .recent-transaction{
+        background-color: var(--bg-grey);
+    }
 }
 
 @media screen and (max-width: 923px) {
@@ -303,7 +307,7 @@ p.span{
     }
 
     .chat{
-        width: 100%;
+        width: 500px;
     }
 
     .wallet-icon{
@@ -330,6 +334,10 @@ p.span{
 
     .hero-img{
         width: 70%;
+    }
+
+    .chat{
+        width: 100%;
     }
 
     @media screen and (max-width: 430px) {
