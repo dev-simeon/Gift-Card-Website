@@ -198,8 +198,12 @@ p.span{
     width: 430px;
 }
 
-.form{
-    width: 400px;
+.flex-item{
+    flex: none;
+}
+
+.settings-card{
+    width: 450px;
 }
 
 .hero-section{
@@ -354,7 +358,7 @@ p.span{
         width: 80%;
     }
 
-    .form{
+    .settings-card{
         width: 100%;
     }
 
