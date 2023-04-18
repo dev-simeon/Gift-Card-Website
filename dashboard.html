@@ -134,61 +134,73 @@
 
     <!-- Fund wallet -->
     <div class="offcanvas bg-primary offcanvas-end gap-1" data-bs-backdrop="static" data-bs-scroll="true" id="fundWallet">
-        <div class="offcanvas-header py-3 px-4">
-            <h6 class="mb-0 fw-bold">Fund Wallet</h6>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-            </button>
-        </div>
-        <div id="depositOffcanvas" class="px-4 d-flex flex-column gap-2">
-            <div>
-                <label for="cardNumber" class="form-label mb-1">Card Number</label>
-                <input type="number" class="form-control bg-grey" id="cardNumber" placeholder="0000 0000 0000" />
+        <div id="depositOffcanvas">
+            <div class="offcanvas-header py-3 px-4">
+                <h6 class="mb-0 fw-bold">Fund Wallet</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                </button>
             </div>
-            <div class="d-flex gap-2">
+            <div class="px-4 d-flex flex-column gap-2">
                 <div>
-                    <label for="validThru" class="form-label mb-1">Valid thru</label>
-                    <input type="number" class="form-control bg-grey" id="validThru" placeholder="MM / yy" />
+                    <label for="cardNumber" class="form-label mb-1">Card Number</label>
+                    <input type="number" class="form-control bg-grey" id="cardNumber" placeholder="0000 0000 0000" />
+                </div>
+                <div class="d-flex gap-2">
+                    <div>
+                        <label for="validThru" class="form-label mb-1">Valid thru</label>
+                        <input type="number" class="form-control bg-grey" id="validThru" placeholder="MM / yy" />
+                    </div>
+                    <div>
+                        <label for="cvc" class="form-label mb-1">CVC</label>
+                        <input type="number" class="form-control bg-grey" id="cvc" placeholder="123" />
+                    </div>
                 </div>
                 <div>
-                    <label for="cvc" class="form-label mb-1">CVC</label>
-                    <input type="number" class="form-control bg-grey" id="cvc" placeholder="123" />
+                    <label for="amount" class="form-label mb-1">Amount</label>
+                    <input type="number" class="form-control bg-grey" id="amount" />
+                </div>
+                <div>
+                    <label for="cardholder" class="form-label mb-1">Cardholder Name</label>
+                    <input type="text" class="form-control bg-grey" id="cardholder" />
+                </div>
+            
+                <div class="d-flex gap-2">
+                    <button class="btn btn-primary">Deposit</button>
+                    <button class="btn btn-outline-accent" data-bs-dismiss="offcanvas">Cancel</button>
                 </div>
             </div>
-            <div>
-                <label for="amount" class="form-label mb-1">Amount</label>
-                <input type="number" class="form-control bg-grey" id="amount" />
-            </div>
-            <div>
-                <label for="cardholder" class="form-label mb-1">Cardholder Name</label>
-                <input type="text" class="form-control bg-grey" id="cardholder" />
-            </div>
-    
-            <div class="d-flex gap-2">
-                <button class="btn btn-primary">Deposit</button>
-                <button class="btn btn-outline-accent" data-bs-dismiss="offcanvas">Cancel</button>
-            </div>
         </div>
-        <div id="withdrawOffcanvas" class="px-4 d-flex d-none flex-column gap-2">
-            <div>
-                <label for="amount" class="form-label mb-1">Amount</label>
-                <input type="number" class="form-control bg-grey" id="amount" />
+        <div id="withdrawOffcanvas" class="d-none">
+            <div class="offcanvas-header py-3 px-4">
+                <h6 class="mb-0 fw-bold">Withdraw</h6>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                </button>
             </div>
-            <div>
-                <select class="form-select bg-grey" aria-label="Default select example">
-                    <option selected>select account</option>
-                    <option value="zenithBank">Zenith Bank</option>
-                    <option value="gtbank">GTBank</option>
-                    <option value="stanbic">Stanbic IBTC Bank</option>
-                    <option value="firstBank">First Bank PLC</option>
-                    <option value="accessBank">Access Bank</option>
-                </select>
-            </div>
-            <div class="d-flex gap-2">
-                <button class="btn btn-primary">Withdraw</button>
-                <button class="btn btn-outline-accent" data-bs-dismiss="offcanvas">Cancel</button>
+            
+            <div class="px-4 d-flex flex-column gap-2">
+                <div>
+                    <label for="amount" class="form-label mb-1">Amount</label>
+                    <input type="number" class="form-control bg-grey" id="amount" />
+                </div>
+                <div>
+                    <select class="form-select bg-grey" aria-label="Default select example">
+                        <option selected>select account</option>
+                        <option value="zenithBank">Zenith Bank</option>
+                        <option value="gtbank">GTBank</option>
+                        <option value="stanbic">Stanbic IBTC Bank</option>
+                        <option value="firstBank">First Bank PLC</option>
+                        <option value="accessBank">Access Bank</option>
+                    </select>
+                </div>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-primary">Withdraw</button>
+                    <button class="btn btn-outline-accent" data-bs-dismiss="offcanvas">Cancel</button>
+                </div>
             </div>
         </div>
     </div>
+
+       
     <!-- Fund wallet -->
 
     <main class="main">
@@ -229,7 +241,7 @@
                         <p class="mb-0 fs-4 fw-bold">₦23,000,000,000</p>
                     </div>
                     <div class="d-flex gap-3">
-                        <a id="deposit" onclick="openDepositMenu" data-bs-toggle="offcanvas"
+                        <a id="deposit" onclick="openDepositMenu()" data-bs-toggle="offcanvas"
                         aria-expanded="false" aria-label="Toggle navigation" class="text-decoration-none text-dark d-flex flex-column align-items-center" href="#fundWallet">
                             <span>
                                 <svg width="45" height="45" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
