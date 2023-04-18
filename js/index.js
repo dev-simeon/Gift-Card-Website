@@ -20,6 +20,23 @@ let generalSettingsPage = document.querySelector("#general");
 let changePasswordPage = document.querySelector("#changePassword");
 let changePasswordPageButton = document.querySelector(".change-password-btn");
 let generalSettingsPageButton = document.querySelector(".general-btn");
+let withdrawal = document.querySelector("#withdraw");
+let withdrawalMenu = document.querySelector("#withdrawOffcanvas");
+let deposit = document.querySelector("#deposit");
+let depositMenu = document.querySelector("#depositOffcanvas");
+
+withdrawal.addEventListener("click", () => {
+    withdrawalMenu.classList.remove("d-none");
+    depositMenu.classList.add("d-none");
+});
+
+deposit.addEventListener("click", () => {
+    depositMenu.classList.remove("d-none");
+    withdrawalMenu.classList.add("d-none");
+});
+
+
+
 
 changePasswordPageButton.addEventListener("click",() => {
     changePasswordPage.classList.remove("d-none");
