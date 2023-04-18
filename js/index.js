@@ -49,15 +49,15 @@ generalSettingsPageButton.addEventListener("click", () => {
 })
 
 
-withdrawal.addEventListener("click", () => {
+function openWithdrawalMenu() {
     withdrawalMenu.classList.remove("d-none");
     depositMenu.classList.add("d-none");
-});
+};
 
-deposit.addEventListener("click", () => {
+function openDepositMenu() {
     depositMenu.classList.remove("d-none");
     withdrawalMenu.classList.add("d-none");
-});
+};
 
 let cards = 
 [
