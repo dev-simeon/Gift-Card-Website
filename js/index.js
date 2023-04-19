@@ -255,10 +255,6 @@ if(select != null){
 }
 
 
-window.addEventListener("load", () => {
-    changeNavbarAppearance();
-});
-
 window.addEventListener("scroll",() => {
     changeNavbarAppearance();
 });
