@@ -13,7 +13,6 @@ let heroSection = document.querySelector(".hero-section");
 let navbar = document.querySelector(".navbar");
 let brandName = document.querySelector(".navbar-brand");
 let menuButton = document.querySelector(".menu path");
-let navLinks = document.querySelectorAll(".nav-link-lg");
 let loginBtn = document.querySelector(".login-btn");
 let signUpButton = document.querySelector(".sign-up-btn");
 let generalSettingsPage = document.querySelector("#general");
@@ -26,7 +25,17 @@ let withdrawal = document.querySelector("#withdraw");
 let withdrawalMenu = document.querySelector("#withdrawOffcanvas");
 let deposit = document.querySelector("#deposit");
 let depositMenu = document.querySelector("#depositOffcanvas");
+let header = document.querySelector(".link-wrapper");
+let navLinks = header.querySelectorAll(".links");
 
+
+for (var i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener("click", () => {
+        let current = document.querySelectorAll(".active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+    });
+}
 
 changePasswordPageButton.addEventListener("click", () => {
     changePasswordPage.classList.remove("d-none");
@@ -263,6 +272,9 @@ window.addEventListener("load", () => {
 window.addEventListener("scroll",() => {
     changeNavbarAppearance();
 });
+
+
+
 
 
 

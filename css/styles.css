@@ -178,6 +178,20 @@ p.span{
     width: 250px !important;
 }
 
+.link{
+    border-left: 3px solid var(--bg-primary);
+}
+
+.link:hover{
+    background-color: var(--bg-grey);
+    border-left: 3px solid var(--bg-accent);
+}
+
+.link.active{
+    background-color: var(--bg-grey);
+    border-left: 3px solid var(--bg-accent);
+}
+
 .offcanvas{
     width: 250px !important;
 }
