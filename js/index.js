@@ -39,56 +39,50 @@ for (var i = 0; i < navLinks.length; i++) {
     });
 };
 
-if (location.pathname == "/settings.html") {
-    changePasswordPageButton.addEventListener("click", () => {
-        changePasswordPage.classList.remove("d-none");
-        changePasswordPageButton.classList.add("active");
-        changePasswordPageButton.classList.add("border-3");
-        changePasswordPageButton.classList.add("border-bottom");
-        generalSettingsPageButton.classList.remove("active");
-        generalSettingsPageButton.classList.remove("border-3");
-        generalSettingsPageButton.classList.remove("border-bottom");
-        generalSettingsPage.classList.add("d-none");
-        bankAccountPageButton.classList.remove("active");
-        bankAccountPageButton.classList.remove("border-bottom");
-        bankAccountPageButton.classList.remove("border-3");
-        bankAccountPage.classList.add("d-none");
-    });
+changePasswordPageButton.addEventListener("click", () => {
+    changePasswordPage.classList.remove("d-none");
+    changePasswordPageButton.classList.add("active");
+    changePasswordPageButton.classList.add("border-3");
+    changePasswordPageButton.classList.add("border-bottom");
+    generalSettingsPageButton.classList.remove("active");
+    generalSettingsPageButton.classList.remove("border-3");
+    generalSettingsPageButton.classList.remove("border-bottom");
+    generalSettingsPage.classList.add("d-none");
+    bankAccountPageButton.classList.remove("active");
+    bankAccountPageButton.classList.remove("border-bottom");
+    bankAccountPageButton.classList.remove("border-3");
+    bankAccountPage.classList.add("d-none");
+});
 
-    generalSettingsPageButton.addEventListener("click", () => {
-        generalSettingsPage.classList.remove("d-none");
-        generalSettingsPageButton.classList.add("active");
-        generalSettingsPageButton.classList.add("border-3");
-        generalSettingsPageButton.classList.add("border-bottom");
-        changePasswordPageButton.classList.remove("active");
-        changePasswordPageButton.classList.remove("border-bottom");
-        changePasswordPageButton.classList.remove("border-3");
-        changePasswordPage.classList.add("d-none");
-        bankAccountPageButton.classList.remove("active");
-        bankAccountPageButton.classList.remove("border-bottom");
-        bankAccountPageButton.classList.remove("border-3");
-        bankAccountPage.classList.add("d-none");
-    });
+generalSettingsPageButton.addEventListener("click", () => {
+    generalSettingsPage.classList.remove("d-none");
+    generalSettingsPageButton.classList.add("active");
+    generalSettingsPageButton.classList.add("border-3");
+    generalSettingsPageButton.classList.add("border-bottom");
+    changePasswordPageButton.classList.remove("active");
+    changePasswordPageButton.classList.remove("border-bottom");
+    changePasswordPageButton.classList.remove("border-3");
+    changePasswordPage.classList.add("d-none");
+    bankAccountPageButton.classList.remove("active");
+    bankAccountPageButton.classList.remove("border-bottom");
+    bankAccountPageButton.classList.remove("border-3");
+    bankAccountPage.classList.add("d-none");
+});
 
-    bankAccountPageButton.addEventListener("click", () => {
-        bankAccountPage.classList.remove("d-none");
-        bankAccountPageButton.classList.add("active");
-        bankAccountPageButton.classList.add("border-3");
-        bankAccountPageButton.classList.add("border-bottom");
-        generalSettingsPageButton.classList.remove("active");
-        generalSettingsPageButton.classList.remove("border-3");
-        generalSettingsPageButton.classList.remove("border-bottom");
-        generalSettingsPage.classList.add("d-none");
-        changePasswordPageButton.classList.remove("active");
-        changePasswordPageButton.classList.remove("border-bottom");
-        changePasswordPageButton.classList.remove("border-3");
-        changePasswordPage.classList.add("d-none");
-    });
-}
-
-
-
-
+bankAccountPageButton.addEventListener("click", () => {
+    bankAccountPage.classList.remove("d-none");
+    bankAccountPageButton.classList.add("active");
+    bankAccountPageButton.classList.add("border-3");
+    bankAccountPageButton.classList.add("border-bottom");
+    generalSettingsPageButton.classList.remove("active");
+    generalSettingsPageButton.classList.remove("border-3");
+    generalSettingsPageButton.classList.remove("border-bottom");
+    generalSettingsPage.classList.add("d-none");
+    changePasswordPageButton.classList.remove("active");
+    changePasswordPageButton.classList.remove("border-bottom");
+    changePasswordPageButton.classList.remove("border-3");
+    changePasswordPage.classList.add("d-none");
+});
 
 let cards = 
 [
