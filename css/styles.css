@@ -205,11 +205,15 @@ p.span{
 }
 
 .chat-wrapper{
-    height: calc(100vh - 81px);
+    height: calc(100vh - (81px + 77px));
 }
 
 .chat{
     width: 430px;
+}
+
+.chat-snippet {
+    cursor: pointer;
 }
 
 .flex-item{
@@ -246,7 +250,6 @@ p.span{
 .sub-nav.active{
     border-color: var(--bg-accent) !important;
 }
-
 
 .span{
     font-size: 15px;
@@ -324,8 +327,20 @@ p.span{
         font-size: 40px;
     }
 
+    .chat-section{
+        height: calc(100vh - 65.91px) !important;
+    }
+
     .chat{
+        overflow: hidden !important;
         width: 500px;
+        background-color: var(--bg-primary);
+        border: 1px solid #dee2e6;
+    }
+
+    .chat-list{
+        height: calc(100% - 126px);
+        overflow-y: scroll;
     }
 
     .wallet-icon{

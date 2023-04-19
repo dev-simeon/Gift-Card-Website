@@ -27,7 +27,9 @@ let deposit = document.querySelector("#deposit");
 let depositMenu = document.querySelector("#depositOffcanvas");
 let header = document.querySelector(".link-wrapper");
 let navLinks = header.querySelectorAll(".links");
+let chatSnippet = document.querySelectorAll(".chat-snippet");
 
+openInnerChat();
 
 for (var i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener("click", () => {
@@ -35,63 +37,58 @@ for (var i = 0; i < navLinks.length; i++) {
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
     });
+};
+
+if (location.pathname == "/settings.html") {
+    changePasswordPageButton.addEventListener("click", () => {
+        changePasswordPage.classList.remove("d-none");
+        changePasswordPageButton.classList.add("active");
+        changePasswordPageButton.classList.add("border-3");
+        changePasswordPageButton.classList.add("border-bottom");
+        generalSettingsPageButton.classList.remove("active");
+        generalSettingsPageButton.classList.remove("border-3");
+        generalSettingsPageButton.classList.remove("border-bottom");
+        generalSettingsPage.classList.add("d-none");
+        bankAccountPageButton.classList.remove("active");
+        bankAccountPageButton.classList.remove("border-bottom");
+        bankAccountPageButton.classList.remove("border-3");
+        bankAccountPage.classList.add("d-none");
+    });
+
+    generalSettingsPageButton.addEventListener("click", () => {
+        generalSettingsPage.classList.remove("d-none");
+        generalSettingsPageButton.classList.add("active");
+        generalSettingsPageButton.classList.add("border-3");
+        generalSettingsPageButton.classList.add("border-bottom");
+        changePasswordPageButton.classList.remove("active");
+        changePasswordPageButton.classList.remove("border-bottom");
+        changePasswordPageButton.classList.remove("border-3");
+        changePasswordPage.classList.add("d-none");
+        bankAccountPageButton.classList.remove("active");
+        bankAccountPageButton.classList.remove("border-bottom");
+        bankAccountPageButton.classList.remove("border-3");
+        bankAccountPage.classList.add("d-none");
+    });
+
+    bankAccountPageButton.addEventListener("click", () => {
+        bankAccountPage.classList.remove("d-none");
+        bankAccountPageButton.classList.add("active");
+        bankAccountPageButton.classList.add("border-3");
+        bankAccountPageButton.classList.add("border-bottom");
+        generalSettingsPageButton.classList.remove("active");
+        generalSettingsPageButton.classList.remove("border-3");
+        generalSettingsPageButton.classList.remove("border-bottom");
+        generalSettingsPage.classList.add("d-none");
+        changePasswordPageButton.classList.remove("active");
+        changePasswordPageButton.classList.remove("border-bottom");
+        changePasswordPageButton.classList.remove("border-3");
+        changePasswordPage.classList.add("d-none");
+    });
 }
 
-changePasswordPageButton.addEventListener("click", () => {
-    changePasswordPage.classList.remove("d-none");
-    changePasswordPageButton.classList.add("active");
-    changePasswordPageButton.classList.add("border-3");
-    changePasswordPageButton.classList.add("border-bottom");
-    generalSettingsPageButton.classList.remove("active");
-    generalSettingsPageButton.classList.remove("border-3");
-    generalSettingsPageButton.classList.remove("border-bottom");
-    generalSettingsPage.classList.add("d-none");
-    bankAccountPageButton.classList.remove("active");
-    bankAccountPageButton.classList.remove("border-bottom");
-    bankAccountPageButton.classList.remove("border-3");
-    bankAccountPage.classList.add("d-none");
-});
-
-generalSettingsPageButton.addEventListener("click", () => {
-    generalSettingsPage.classList.remove("d-none");
-    generalSettingsPageButton.classList.add("active");
-    generalSettingsPageButton.classList.add("border-3");
-    generalSettingsPageButton.classList.add("border-bottom");
-    changePasswordPageButton.classList.remove("active");
-    changePasswordPageButton.classList.remove("border-bottom");
-    changePasswordPageButton.classList.remove("border-3");
-    changePasswordPage.classList.add("d-none");
-    bankAccountPageButton.classList.remove("active");
-    bankAccountPageButton.classList.remove("border-bottom");
-    bankAccountPageButton.classList.remove("border-3");
-    bankAccountPage.classList.add("d-none");
-});
-
-bankAccountPageButton.addEventListener("click", () => {
-    bankAccountPage.classList.remove("d-none");
-    bankAccountPageButton.classList.add("active");
-    bankAccountPageButton.classList.add("border-3");
-    bankAccountPageButton.classList.add("border-bottom");
-    generalSettingsPageButton.classList.remove("active");
-    generalSettingsPageButton.classList.remove("border-3");
-    generalSettingsPageButton.classList.remove("border-bottom");
-    generalSettingsPage.classList.add("d-none");
-    changePasswordPageButton.classList.remove("active");
-    changePasswordPageButton.classList.remove("border-bottom");
-    changePasswordPageButton.classList.remove("border-3");
-    changePasswordPage.classList.add("d-none");
-})
 
 
-function openWithdrawalMenu() {
-    withdrawalMenu.classList.remove("d-none");
-    depositMenu.classList.add("d-none");
-};
 
-function openDepositMenu() {
-    depositMenu.classList.remove("d-none");
-    withdrawalMenu.classList.add("d-none");
-};
 
 let cards = 
 [
@@ -264,7 +261,6 @@ if(select != null){
 }
 
 
-
 window.addEventListener("load", () => {
     changeNavbarAppearance();
 });
@@ -272,14 +268,6 @@ window.addEventListener("load", () => {
 window.addEventListener("scroll",() => {
     changeNavbarAppearance();
 });
-
-
-
-
-
-
-
-
 
 
 function caculateSellRate(cardAmount,rate) {
@@ -319,3 +307,28 @@ function changeNavbarAppearance() {
         });
     }
 };
+
+function openWithdrawalMenu() {
+    withdrawalMenu.classList.remove("d-none");
+    depositMenu.classList.add("d-none");
+};
+
+function openDepositMenu() {
+    depositMenu.classList.remove("d-none");
+    withdrawalMenu.classList.add("d-none");
+};
+
+
+function openInnerChat() {
+    if (window.innerWidth < 768) {
+        chatSnippet.forEach(element => {
+            element.addEventListener("click", () => {
+                window.location.href = "./conversation.html";
+            });
+        });
+    }
+    else {
+        return;
+    }
+};
+
