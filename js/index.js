@@ -29,8 +29,6 @@ let header = document.querySelector(".link-wrapper");
 let navLinks = header.querySelectorAll(".links");
 let chatSnippet = document.querySelectorAll(".chat-snippet");
 
-openInnerChat();
-
 for (var i = 0; i < navLinks.length; i++) {
     navLinks[i].addEventListener("click", () => {
         let current = document.querySelectorAll(".active");
@@ -39,7 +37,7 @@ for (var i = 0; i < navLinks.length; i++) {
     });
 };
 
-changePasswordPageButton.addEventListener("click", () => {
+function navigateToChangePasswordPage() {
     changePasswordPage.classList.remove("d-none");
     changePasswordPageButton.classList.add("active");
     changePasswordPageButton.classList.add("border-3");
@@ -52,9 +50,9 @@ changePasswordPageButton.addEventListener("click", () => {
     bankAccountPageButton.classList.remove("border-bottom");
     bankAccountPageButton.classList.remove("border-3");
     bankAccountPage.classList.add("d-none");
-});
+};
 
-generalSettingsPageButton.addEventListener("click", () => {
+function navigateToGeneralPage() {
     generalSettingsPage.classList.remove("d-none");
     generalSettingsPageButton.classList.add("active");
     generalSettingsPageButton.classList.add("border-3");
@@ -67,9 +65,9 @@ generalSettingsPageButton.addEventListener("click", () => {
     bankAccountPageButton.classList.remove("border-bottom");
     bankAccountPageButton.classList.remove("border-3");
     bankAccountPage.classList.add("d-none");
-});
+};
 
-bankAccountPageButton.addEventListener("click", () => {
+function navigateToBankAccountPage() {
     bankAccountPage.classList.remove("d-none");
     bankAccountPageButton.classList.add("active");
     bankAccountPageButton.classList.add("border-3");
@@ -82,7 +80,7 @@ bankAccountPageButton.addEventListener("click", () => {
     changePasswordPageButton.classList.remove("border-bottom");
     changePasswordPageButton.classList.remove("border-3");
     changePasswordPage.classList.add("d-none");
-});
+};
 
 let cards = 
 [
@@ -254,6 +252,16 @@ if(select != null){
     });
 }
 
+openInnerChat();
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 767) {
+        location.href = "./chat.html";
+    }
+    else {
+        openInnerChat();
+    }
+})
 
 window.addEventListener("scroll",() => {
     changeNavbarAppearance();
@@ -316,6 +324,7 @@ function openInnerChat() {
                 window.location.href = "./conversation.html";
             });
         });
+        window.addEventListener
     }
     else {
         return;
