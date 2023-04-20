@@ -25,17 +25,7 @@ let withdrawal = document.querySelector("#withdraw");
 let withdrawalMenu = document.querySelector("#withdrawOffcanvas");
 let deposit = document.querySelector("#deposit");
 let depositMenu = document.querySelector("#depositOffcanvas");
-let header = document.querySelector(".link-wrapper");
-let navLinks = header.querySelectorAll(".links");
 let chatSnippet = document.querySelectorAll(".chat-snippet");
-
-for (var i = 0; i < navLinks.length; i++) {
-    navLinks[i].addEventListener("click", () => {
-        let current = document.querySelectorAll(".active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-    });
-};
 
 function navigateToChangePasswordPage() {
     changePasswordPage.classList.remove("d-none");
@@ -252,11 +242,17 @@ if(select != null){
     });
 }
 
-openInnerChat();
 
+openInnerChat();
 window.addEventListener("resize", () => {
-    openInnerChat();
-})
+    if (window.innerWidth < 768) {
+        openInnerChat();
+    }
+    else {
+        return;
+    }
+});
+
 
 window.addEventListener("scroll",() => {
     changeNavbarAppearance();
