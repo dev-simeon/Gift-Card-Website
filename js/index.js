@@ -242,16 +242,15 @@ if(select != null){
     });
 }
 
-
 openInnerChat();
 window.addEventListener("resize", () => {
-    if (window.innerWidth < 768) {
-        openInnerChat();
-    }
-    else {
+    if (window.innerWidth > 767) {
         return;
     }
-});
+    else {
+        openInnerChat();
+    }
+})
 
 
 window.addEventListener("scroll",() => {
