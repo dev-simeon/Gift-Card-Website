@@ -255,12 +255,7 @@ if(select != null){
 openInnerChat();
 
 window.addEventListener("resize", () => {
-    if (window.innerWidth > 767) {
-        location.href = "./chat.html";
-    }
-    else {
-        openInnerChat();
-    }
+    openInnerChat();
 })
 
 window.addEventListener("scroll",() => {
@@ -324,10 +319,8 @@ function openInnerChat() {
                 window.location.href = "./conversation.html";
             });
         });
-        window.addEventListener
     }
     else {
         return;
     }
 };
-

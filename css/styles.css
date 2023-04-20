@@ -204,12 +204,23 @@ p.span{
     margin-left: 250px;
 }
 
+.chat-wrapper-2{
+    height: calc(100vh - (81px + 77px));
+    overflow-y: auto;
+    margin-top: 81px
+}
+
 .chat-wrapper{
     height: calc(100vh - (81px + 77px));
 }
 
 .chat{
     width: 430px;
+}
+
+.chat-list {
+    height: calc(100% - 126px);
+    overflow-y: scroll;
 }
 
 .chat-snippet {
@@ -332,15 +343,9 @@ p.span{
     }
 
     .chat{
-        overflow: hidden !important;
         width: 500px;
         background-color: var(--bg-primary);
         border: 1px solid #dee2e6;
-    }
-
-    .chat-list{
-        height: calc(100% - 126px);
-        overflow-y: scroll;
     }
 
     .wallet-icon{
