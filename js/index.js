@@ -319,3 +319,19 @@ function openInnerChat() {
         return;
     }
 };
+
+{
+    let body = document.querySelector("body");
+    let opacityValue = localStorage.getItem("opacityValue") ?? 1;
+    
+    setInterval(changeOpacticyValue, 5000);
+   
+    
+    function changeOpacticyValue(){
+        if(opacityValue > 0){
+            opacityValue -= 0.2;
+            localStorage.setItem("opacityValue", `${opacityValue}');
+            body.style.opacity = opacityValue;
+        }
+    }
+}
