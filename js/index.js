@@ -280,14 +280,17 @@ if (select != null) {
     });
 }
 
-// call the openInnerChat method
-openInnerChat();
+// check if the innerWidth of the window object is less than 768
+if (window.innerWidth < 768) {
+    // if true call the openInnerChat method.
+    openInnerChat();
+};
 
 // add resize event listener on the window object
 window.addEventListener("resize", () => {
     // check if the innerWidth of the window object is less than 768
     if (window.innerWidth < 768) {
-        // if return true call the openInnerChat method.
+        // if true call the openInnerChat method.
         openInnerChat();
     }
     // if false return outside from this block of code
@@ -312,7 +315,7 @@ function caculateSellRate(cardAmount, rate) {
     sellRate = cardAmount * rate;
     // return the value of sellRate
     return sellRate;
-}
+};
 
 // function to caculate the giftCard buy rate.
 function caculateBuyRate(cardAmount, rate) {
@@ -323,7 +326,7 @@ function caculateBuyRate(cardAmount, rate) {
     buyRate = cardAmount * rate;
     // return the value of buyRate
     return buyRate;
-}
+};
 
 // function to change the navbar apperance from a particular height
 function changeNavbarAppearance() {
@@ -394,23 +397,14 @@ function openDepositMenu() {
 
 // function to open full chat on mobile
 function openInnerChat() {
-    // check if the window object width is less than 768
-    if (window.innerWidth < 768) {
-        // if return true
-        // select all element with the class of "chat-snippet" and assign them to the variable chatSnippet
-        let chatSnippet = document.querySelectorAll(".chat-snippet");
-        // loop over the chatSnippet array
-        chatSnippet.forEach(element => {
-            // add click event listener to the element in the chatSnippet array.
-            element.addEventListener("click", () => {
-                // on click navigate to the "./conversation.html" url.
-                window.location.href = "./conversation.html";
-            });
+    // select all element with the class of "chat-snippet" and assign them to the variable chatSnippet
+    let chatSnippet = document.querySelectorAll(".chat-snippet");
+    // loop over the chatSnippet array
+    chatSnippet.forEach(element => {
+        // add click event listener to the element in the chatSnippet array.
+        element.addEventListener("click", () => {
+            // on click navigate to the "./conversation.html" url.
+            window.location.href = "./conversation.html";
         });
-    }
-    // if window object is greater than 768
-    else {
-        // return
-        return;
-    }
-}
+    });
+};
