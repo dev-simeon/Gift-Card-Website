@@ -259,7 +259,7 @@ p.span{
 }
 
 .sub-nav.active{
-    border-color: var(--bg-accent) !important;
+    border-bottom: 3px solid var(--bg-accent);
 }
 
 .span{
