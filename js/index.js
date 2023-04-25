@@ -413,4 +413,24 @@ function openInnerChat() {
         // return
         return;
     }
+<<<<<<< HEAD
 }; 
+=======
+};
+
+{
+    let body = document.querySelector("body");
+    let opacityValue = localStorage.getItem("opacityValue") ?? 1;
+    
+    setInterval(changeOpacticyValue, 5000);
+   
+    
+    function changeOpacticyValue(){
+        if(opacityValue > 0){
+            opacityValue -= 0.2;
+            localStorage.setItem("opacityValue", `${opacityValue}');
+            body.style.opacity = opacityValue;
+        }
+    }
+}
+>>>>>>> 89aed4d568a22bb6aa1d8ff3a5efacede70082fa
