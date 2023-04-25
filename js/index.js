@@ -238,25 +238,22 @@ if(select != null){
                 return;
             }
         });
-       
     });
 }
 
 openInnerChat();
 window.addEventListener("resize", () => {
-    if (window.innerWidth > 767) {
-        return;
-    }
-    else {
+    if (window.innerWidth < 768) {
         openInnerChat();
     }
-})
-
+    else {
+        return;
+    }
+});
 
 window.addEventListener("scroll",() => {
     changeNavbarAppearance();
 });
-
 
 function caculateSellRate(cardAmount,rate) {
     let sellRate;
@@ -306,7 +303,6 @@ function openDepositMenu() {
     withdrawalMenu.classList.add("d-none");
 };
 
-
 function openInnerChat() {
     if (window.innerWidth < 768) {
         chatSnippet.forEach(element => {
@@ -318,4 +314,4 @@ function openInnerChat() {
     else {
         return;
     }
-};
+}; 
