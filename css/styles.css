@@ -393,7 +393,6 @@ p.span{
     }
 }
  
-
 @media screen and (max-width: 449px) {
     .hero-img{
         width: 80%;
@@ -401,6 +400,12 @@ p.span{
 
     .heading{
         font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .offer-card{
+        flex-direction: column;
     }
 }
 
